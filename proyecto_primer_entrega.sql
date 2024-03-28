@@ -6,7 +6,7 @@ id_sucursal int auto_increment not null,
 nombre varchar (20) not null,
 direccion varchar (20) not null,
 ciudad varchar (20) not null,
-telefono int (15) not null,
+telefono int (15) ,
 primary key (id_sucursal)
 );
 
@@ -21,7 +21,7 @@ id_cliente int auto_increment not null,
 nombre varchar(20) not null,
 apellido varchar (20) not null,
 dni int (8) not null,
-telefono int(10) not null,
+telefono int(10),
 id_sucursal int,
 id_actividad int,
 foreign key (id_actividad) references actividades(id_actividad),
@@ -66,7 +66,7 @@ foreign key (id_proveedor) references proveedores (id_proveedor)
 
 create table metodo_pago(
 id_metodo_pago int auto_increment not null,
-m_pago varchar(20),
+m_pago varchar(20) not null,
 primary key (id_metodo_pago)
 );
 
